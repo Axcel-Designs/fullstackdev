@@ -38,6 +38,13 @@
    background: rgb(196, 182, 182);
    padding: 2vw;
    border-radius: 3px;
+   box-shadow: 3px 3px 3px;
+   border: 2px solid gray;
+ }
+
+ section:hover {
+   transform: rotate(90);
+   transform: scale(1.1);
  }
 
  footer {
@@ -45,15 +52,24 @@
    padding: 2vw;
  }
 
- @media (max-width: 768px) {
-  nav>ul {
-      display: flex;
-      flex-direction:column ;
-      gap: 8px;
-    }
+ @media screen and (max-width: 768px) {
+
+   nav>ul {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+   }
 
    main {
      display: grid;
      grid-template-columns: 1fr;
+   }
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+   main {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
    }
  }
